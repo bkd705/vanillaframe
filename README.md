@@ -2,6 +2,8 @@
 
 A insanely simple, and probably insecure, slow, and all kinds of other bad adjectives, component based vanilla JavaScript framework.
 
+Some of it is based off React (ie. domRender()), but nothing was directly taken from there (if it was it wouldn't be this bad ;)).
+
 ## Setup
 
 - Clone Repo
