@@ -3,13 +3,29 @@ function changePath(newPath) {
 }
 
 function Link(path, title) {
-  const linkElement = document.createElement('li')
-  linkElement.innerText = title
-  linkElement.addEventListener('click', () => {
-    changePath(path)
-  })
+  const handleClick = () => {
+    window.location.hash = `/${path}`
+  }
 
-  return linkElement
+  const template = `
+    <li id="${title}">${title}</li>
+  `
+
+  if(document.getElementById(title)) {
+    document.getElementById(title).addEventListener('click', () => {
+      console.log('click')
+      handleClick()
+    })
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById(title).addEventListener('click', () => {
+      console.log('click')
+      handleClick()
+    })
+  }, false);
+
+  return template
 }
 
 export default Link

@@ -13,10 +13,10 @@ function router(components, routes, location) {
 }
 
 export function domRender(wrapper, components, routes, element) {
-  element.append(wrapper(router(components, routes, window.location.hash)))
+  element.insertAdjacentHTML('afterbegin', wrapper(router(components, routes, window.location.hash)))
 
   window.addEventListener('hashchange', (event) => {
     element.innerHTML = ''
-    element.append(wrapper(router(components, routes, event.newURL)))
+    element.insertAdjacentHTML('afterbegin', wrapper(router(components, routes, event.newURL)))
   })
 }

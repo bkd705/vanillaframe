@@ -1,7 +1,7 @@
 module.exports = {
   entry: './app/index.js',
   resolve: { 
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.jsx']
   },
   output: {
     filename: 'bundle.js',
@@ -12,7 +12,7 @@ module.exports = {
     loaders: [{
       test: /\.js?$/,
       exclude: /(node_modules)/,
-      loader: 'babel',
+      loader: 'babel-loader',
       query: {
         presets: ['es2015', 'stage-0']
       }

@@ -1,10 +1,11 @@
 function Home() {
-  const wrapper = document.createElement('div')
-  const header = document.createElement('h2')
-  header.innerText = 'Home Page'
-  wrapper.append(header)
-  
-  return wrapper
+  const template = `
+    <div>
+      <h1>Home Page</h1>
+    </div>
+  `
+
+  return template
 }
 
 export default Home

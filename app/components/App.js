@@ -1,17 +1,14 @@
-import Link from './Link'
+import Link, { changePath } from './Link'
 
 function App(component) {
-    const wrapper = document.createElement('div')
-    const nav = document.createElement('nav')
-    
-    nav.append(Link('about', 'About'))
-    nav.append(Link('contact', 'Contact'))
-    nav.append(Link('', 'Home'))
+    const template = `
+        <div>
+            ${Link('about', 'About')}
+            ${component}
+        </div>
+    `
 
-    wrapper.append(nav)
-    wrapper.append(component)
-
-    return wrapper
+    return template
 }
 
 export default App

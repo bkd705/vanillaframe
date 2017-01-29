@@ -1,11 +1,11 @@
 function Contact() {
-  const wrapper = document.createElement('div')
-  const h2 = document.createElement('h2')
-  h2.innerText = 'Contact Page'
+  const template = `
+    <div>
+      <h1>Hello World!</h1>
+    </div>
+  `
 
-  wrapper.append(h2)
-
-  return wrapper
+  return template
 }
 
 export default Contact
